@@ -1,4 +1,4 @@
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { defineStore } from '../../pinia'
 
 function apiLogin(a, p) {
@@ -29,6 +29,8 @@ export const useIdSetup = defineStore('idSetup', () => {
     isAdmin: false
   })
 
+  const dataRef = ref('')
+
   const add = () => {
     state.num++
   }
@@ -39,7 +41,7 @@ export const useIdSetup = defineStore('idSetup', () => {
     state.isAdmin = userData.isAdmin
   }
 
-  return { state, add, login }
+  return { state, dataRef, add, login }
 })
 
 export const useId = defineStore('id', {
