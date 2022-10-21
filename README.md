@@ -247,7 +247,7 @@ function createSetupStore($id, setup, options, pinia, isOptionsStore) {
 }
 ```
 
-### storeToRefs
+## storeToRefs
 
 `storeToRefs` 的作用是能够使解构的数据保持响应，所以我们需要把是 `ref` 和 `reactive` 的数据经过 `toRef()` 转成 `ref` 的响应式数据
 
@@ -268,3 +268,11 @@ export function storeToRefs(store) {
   return refs
 }
 ```
+
+## 剩余
+
+1. 热更新
+2. mapXxx 辅助函数
+3. use 插件
+4. 发布订阅
+5. 其中包含的 $xx 函数
